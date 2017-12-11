@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Agenda Sr. Perez</title>
+    <link rel="stylesheet" href="css/agenda.css">
+  </head>
+  <body onload="onload()">
+    <div class="contact new" id="saveData">
+      <div class="data">
+        <div class="constant-data">
+          <p>
+            Nombre: <br>
+            Dirección: <br>
+            Teléfono: <br>
+          </p>
+        </div>
+        <div class="var-data" id="var-data">
+          <form class="" action="index.html" method="post">
+            <input id="nombre" type="text" name="nombre"/>
+            <input id="direccion" type="text" name="direccion"/>
+            <input id="telefono" type="text" name="telefono"/>
+          </form>
+        </div>
+      </div>
+      <div class="buttons">
+        <button type="button" id="saveButton" name="save" onclick="addNewContact()">Guardar</button>
+        <button type="button" id="cancelButton" name="save" onclick="cancelNewContact()">Cancelar</button>
+      </div>
+    </div>
+    <div class="main" id="main">
+      <div class="submain1">
+        <button class="backButton" id="backButton" type="button" name="button" onclick="recoverContacts()">Atras</button>
+        <input id="searcher" type="search" name="q" placeholder="Search..." onkeydown="searchWithKey(event)">
+        <button class="searchButton" type="button" name="button" onclick="searchContact()">Buscar</button>
+      </div>
+      <div class="submain2" id="submain2">
+        <div class="contact ref" id="contact">
+          <div class="data">
+            <div class="constant-data">
+              <p>
+                Nombre: <br>
+                Dirección: <br>
+                Teléfono: <br>
+              </p>
+            </div>
+            <div class="var-data" id="var-data">
+              <input id="nombre" class="nombre" type="text" name="nombre" value="" disabled>
+              <input id="direccion" type="text" name="direccion" value="" disabled>
+              <input id="telefono" type="text" name="telefono" value="" disabled>
+          </div>
+          </div>
+          <div class="buttons">
+            <button type="button" id="editbutton" name="editar">Editar</button>
+            <button type="button" id="deletebutton" name="eliminar">Eliminar</button>
+          </div>
+        </div>
+        <div class="submain22" id="submain22">
+        </div>
+        <h1 id="bienvenida">Agregue sus contactos utilizando el botón "Nuevo"</h1>
+      </div>
+    </div>
+    <button class="addb" type="button" name="nuevo" onclick="newContact()">Nuevo</button>
+    <script type="text/javascript" src="agenda.js"></script>
+  </body>
+</html>
